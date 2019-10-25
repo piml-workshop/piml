@@ -286,9 +286,9 @@
       webkit-tap-highlight-color: rgba(255, 255, 255, 0.2);
   }
 
+  #access,
   #about,
   #speakers,
-  #organizers,
   #papers
   {
       width: 100%;
@@ -297,6 +297,7 @@
       background-color: lightgrey;
   }
 
+  #organizers,
   #schedule,
   #grants,
   #dates
@@ -326,16 +327,16 @@
   }
 
   li.organizer {
-      background-color: lightgrey;
+      background-color: black;
       font-size: 18px;
-      border-color: lightgrey;
+      border-color: black;
   }
 
   @media (min-width: 768px) {
       li.organizer {
-          background-color: lightgrey;
+          background-color: black;
           font-size: 20px;
-          border-color: lightgrey;
+          border-color: black;
       }
   }
 
@@ -433,8 +434,8 @@
   }
 
   div.talk-abstract {
-      background-color: lightgrey;
-      color: black;
+      background-color: black;
+      color: white;
       font-size: 14px;
       text-align: left;
       padding-top: 15px;
