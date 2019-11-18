@@ -235,7 +235,20 @@
                     <tr>
                         <td colspan="2" class="hiddenRow">
                             <div class="accordion-body collapse talk-abstract" id="tabs3">
-                            More details coming soon
+                              Differential privacy has seen remarkable success as a rigorous and practical formalization of data privacy in the past decade.
+                              This privacy definition and its divergence based relaxations, however, have several acknowledged weaknesses, either in handling composition of private algorithms or in analyzing important primitives like privacy amplification by subsampling.
+                              Inspired by the hypothesis testing formulation of privacy, this paper proposes a new relaxation, which we term `f-differential privacy' (f-DP).
+                              This notion of privacy has a number of appealing properties and, in particular, avoids difficulties associated with divergence based relaxations.
+                              First, f-DP preserves the hypothesis testing interpretation.
+                              In addition, f-DP allows for lossless reasoning about composition in an algebraic fashion.
+                              Moreover, we provide a powerful technique to import existing results proven for original DP to f-DP and, as an application, obtain a simple subsampling theorem for f-DP.
+                              In addition to the above findings, we introduce a canonical single-parameter family of privacy notions within the f-DP class that is referred to as `Gaussian differential privacy' (GDP),
+                              defined based on testing two shifted Gaussians.
+                              GDP is focal among the f-DP class because of a central limit theorem we prove.
+                              More precisely, the privacy guarantees of any hypothesis testing based definition of privacy (including original DP) converges to GDP in the limit under composition.
+                              The CLT also yields a computationally inexpensive tool for analyzing the exact composition of private algorithms.
+                              Taken together, this collection of attractive properties render f-DP a mathematically coherent, analytically tractable, and versatile framework for private data analysis.
+                              Finally, we demonstrate the use of the tools we develop by giving an improved privacy analysis of noisy stochastic gradient descent.
                             </div>
                         </td>
                     </tr>
@@ -243,7 +256,7 @@
                     <tr>
                         <td class="time">9:25</td>
                         <td class="slot talk"><a href="#tabs4" data-toggle="collapse" class="accordion-toggle">
-                        QUOTIENT: Two-Party Secure Neural Network Training and Prediction
+                        QUOTIENT: Two-Party Secure Neural Network Training &amp; Prediction
                         </a>
                         (contributed talk)
                         &nbsp;&nbsp;
@@ -256,7 +269,17 @@
                     <tr>
                         <td colspan="2" class="hiddenRow">
                             <div class="accordion-body collapse talk-abstract" id="tabs4">
-                            More details coming soon
+                                Recently, there has been a wealth of effort devoted to the design of secure protocols for machine learning tasks.
+                                Much of this is aimed at enabling secure prediction from highly-accurate Deep Neural Networks (DNNs).
+                                However, as DNNs are trained on data, a key question is how such models can be also trained securely.
+                                The few prior works on secure DNN training have focused either on designing custom protocols for existing training algorithms
+                                or on developing tailored training algorithms and then applying generic secure protocols.
+                                In this work, we investigate the advantages of designing training algorithms alongside a novel secure protocol, incorporating optimizations on both fronts.
+                                We present QUOTIENT, a new method for discretized training of DNNs,
+                                along with a customized secure two-party protocol for it.
+                                QUOTIENT incorporates key components of state-of-the-art DNN training such as layer normalization and adaptive gradient methods,
+                                and improves upon the state-of-the-art in DNN training in two-party computation.
+                                Compared to prior work, we obtain an improvement of 50X in WAN time and 6&#37; in absolute accuracy.
                             </div>
                         </td>
                     </tr>
