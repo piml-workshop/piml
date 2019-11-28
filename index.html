@@ -537,9 +537,15 @@
                         </a> &nbsp;&nbsp;
                         <a href="https://arxiv.org/abs/1911.09564" class="link-paper">[arxiv]</a>
                     </div>
-                    <!-- <div id="abs2" class="panel-footer panel-paper-footer collapse">
-                    ABSTRACT
-                    </div> -->
+                    <div id="abs2" class="panel-footer panel-paper-footer collapse">
+                    We consider the problem of minimizing a convex risk with stochastic subgradients guaranteeing &#x3F5;-locally differentially private (&#x3F5;-LDP).
+                    While it has been shown that stochastic optimization is possible with &#x3F5;-LDP via the standard SGD (Song et al., 2013),
+                    its convergence rate largely depends on the learning rate, which must be tuned via repeated runs.
+                    Further, tuning is detrimental to privacy loss since it significantly increases the number of gradient requests.
+                    In this work, we propose BANCO (Betting Algorithm for Noisy COins),
+                    the first &#x3F5;-LDP SGD algorithm that essentially matches the convergence rate of the tuned SGD without any learning rate parameter,
+                    reducing privacy loss and saving privacy budget.
+                    </div>
                 </div>
                 <div class="panel panel-default panel-paper">
                     <div class="panel-body panel-paper-body">
@@ -552,9 +558,24 @@
                         </a> &nbsp;&nbsp;
                         <a href="https://arxiv.org/abs/1909.01783" class="link-paper">[arxiv]</a>
                     </div>
-                    <!-- <div id="abs3" class="panel-footer panel-paper-footer collapse">
-                    ABSTRACT
-                    </div> -->
+                    <div id="abs3" class="panel-footer panel-paper-footer collapse">
+                    One of the most effective algorithms for differentially private learning and optimization is objective perturbation.
+                    This technique augments a given optimization problem (e.g. deriving from an ERM problem) with a random linear term,
+                    and then exactly solves it.
+                    However, to date, analyses of this approach crucially rely on the convexity and smoothness of the objective function.
+                    We give two algorithms that extend this approach substantially.
+                    The first algorithm requires nothing except boundedness of the loss function,
+                    and operates over a discrete domain.
+                    Its privacy and accuracy guarantees hold even without assuming convexity.
+                    The second algorithm operates over a continuous domain and requires only that the loss function be bounded and Lipschitz in its continuous parameter.
+                    Its privacy analysis does not even require convexity.
+                    Its accuracy analysis does require convexity,
+                    but does not require second order conditions like smoothness.
+                    We complement our theoretical results with an empirical evaluation of the non-convex case,
+                    in which we use an integer program solver as our optimization oracle.
+                    We find that for the problem of learning linear classifiers,
+                    directly optimizing for 0/1 loss using our approach can out-perform the more standard approach of privately optimizing a convex-surrogate loss function on the Adult dataset.
+                    </div>
                 </div>
                 <div class="panel panel-default panel-paper">
                     <div class="panel-body panel-paper-body">
@@ -612,9 +633,20 @@
                         </a> &nbsp;&nbsp;
                         <a href="https://arxiv.org/pdf/1910.04257.pdf" class="link-paper">[arxiv]</a>
                     </div>
-                    <!-- <div id="abs7" class="panel-footer panel-paper-footer collapse">
-                    ABSTRACT
-                    </div> -->
+                    <div id="abs7" class="panel-footer panel-paper-footer collapse">
+                    With the increasing adoption of AI,
+                    inherent security and privacy vulnerabilities for machine learning systems are being discovered.
+                    One such vulnerability makes it possible for an adversary to obtain private information about the types of instances used to train the targeted machine learning model.
+                    This so-called model inversion attack is based on sequential leveraging of classification scores towards obtaining high confidence representations for various classes.
+                    However, for deep networks, such procedures usually lead to unrecognizable representations that are useless for the adversary.
+                    In this paper, we introduce a more realistic definition of model inversion,
+                    where the adversary is aware of the general purpose of the attacked model
+                    (for instance, whether it is an OCR system or a facial recognition system),
+                    and the goal is to find realistic class representations within the corresponding lower-dimensional manifold
+                    (of, respectively, general symbols or general faces).
+                    To that end, we leverage properties of generative adversarial networks for constructing a connected lower-dimensional manifold,
+                    and demonstrate the efficiency of our model inversion attack that is carried out within that manifold.
+                    </div>
                 </div>
                 <div class="panel panel-default panel-paper">
                     <div class="panel-body panel-paper-body">
@@ -642,9 +674,18 @@
                         </a> &nbsp;&nbsp;
                         <a href="https://arxiv.org/pdf/1910.05108.pdf" class="link-paper">[arxiv]</a>
                     </div>
-                    <!-- <div id="abs9" class="panel-footer panel-paper-footer collapse">
-                    ABSTRACT
-                    </div> -->
+                    <div id="abs9" class="panel-footer panel-paper-footer collapse">
+                    Survival function estimation is used in many disciplines,
+                    but it is most common in medical analytics in the form of the Kaplan-Meier estimator.
+                    Sensitive data (patient records) is used in the estimation without any explicit control on the information leakage,
+                    which is a significant privacy concern.
+                    We propose a first differentially private estimator of the survival function and
+                    show that it can be easily extended to provide differentially private confidence intervals and test statistics
+                    without spending any extra privacy budget.
+                    We further provide extensions for differentially private estimation of the competing risk cumulative incidence function.
+                    Using nine real-life clinical datasets,
+                    we provide empirical evidence that our proposed method provides good utility while simultaneously providing strong privacy guarantees.
+                    </div>
                 </div>
                 <div class="panel panel-default panel-paper">
                     <div class="panel-body panel-paper-body">
@@ -657,9 +698,25 @@
                         </a> &nbsp;&nbsp;
                         <a href="https://arxiv.org/pdf/1909.04126.pdf" class="link-paper">[arxiv]</a>
                     </div>
-                    <!-- <div id="abs10" class="panel-footer panel-paper-footer collapse">
-                    ABSTRACT
-                    </div> -->
+                    <div id="abs10" class="panel-footer panel-paper-footer collapse">
+                    Deep learning has been widely utilized in many computer vision applications and achieved remarkable commercial success.
+                    However, running deep learning models on mobile devices is generally challenging due to limitation of the available computing resources.
+                    It is common to let the users send their service requests to cloud servers that run the large-scale deep learning models to process.
+                    Sending the data associated with the service requests to the cloud, however, impose risks on the user data privacy.
+                    Some prior arts proposed sending the features extracted from raw data (e.g., images) to the cloud.
+                    Unfortunately, these extracted features can still be exploited by attackers to recover raw images and to infer embedded private attributes (e.g., age, gender, etc.).
+                    In this paper, we propose an adversarial training framework <i>DeepObfuscator</i> that can prevent extracted features from being utilized to reconstruct raw images and infer private attributes,
+                    while retaining the useful information for the intended cloud service (i.e., image classification).
+                    DeepObfuscator includes a learnable encoder,  namely,  obfuscator  that  is  designed  to  hide  privacy-related sensitive information from the features by performing our proposed adversarial training algorithm.
+                    The proposed algorithm is designed by simulating the game between an attacker who makes efforts to reconstruct raw images and infer private attributes from the extracted features
+                    and a defender who aims to protect user privacy.
+                    Our experiments on CelebA dataset show that the quality of the reconstructed images from the obfuscated features of the raw image is dramatically decreased
+                    from 0.9458 to 0.3175 in terms of multi-scale structural similarity (MS-SSIM).
+                    The person in the reconstructed image, hence, becomes hardly to be re-identified.
+                    The classification accuracy of the inferred private attributes that can be achieved by the attacker drops down to a random-guessing level, e.g.,
+                    the accuracy of gender is reduced from 97.36&#37; to 58.85&#37;.
+                    As a comparison, the accuracy of the intended classification tasks performed via the cloud service drops by only 2&#37;.
+                    </div>
                 </div>
                 <div class="panel panel-default panel-paper">
                     <div class="panel-body panel-paper-body">
