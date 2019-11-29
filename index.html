@@ -237,12 +237,12 @@
                             <div class="accordion-body collapse talk-abstract" id="tabs3">
                               Differential privacy has seen remarkable success as a rigorous and practical formalization of data privacy in the past decade.
                               This privacy definition and its divergence based relaxations, however, have several acknowledged weaknesses, either in handling composition of private algorithms or in analyzing important primitives like privacy amplification by subsampling.
-                              Inspired by the hypothesis testing formulation of privacy, this paper proposes a new relaxation, which we term `f-differential privacy' (f-DP).
+                              Inspired by the hypothesis testing formulation of privacy, this paper proposes a new relaxation, which we term &#10077;f-differential privacy&#10078; (f-DP).
                               This notion of privacy has a number of appealing properties and, in particular, avoids difficulties associated with divergence based relaxations.
                               First, f-DP preserves the hypothesis testing interpretation.
                               In addition, f-DP allows for lossless reasoning about composition in an algebraic fashion.
                               Moreover, we provide a powerful technique to import existing results proven for original DP to f-DP and, as an application, obtain a simple subsampling theorem for f-DP.
-                              In addition to the above findings, we introduce a canonical single-parameter family of privacy notions within the f-DP class that is referred to as `Gaussian differential privacy' (GDP),
+                              In addition to the above findings, we introduce a canonical single-parameter family of privacy notions within the f-DP class that is referred to as &#10077;Gaussian differential privacy&#10078; (GDP),
                               defined based on testing two shifted Gaussians.
                               GDP is focal among the f-DP class because of a central limit theorem we prove.
                               More precisely, the privacy guarantees of any hypothesis testing based definition of privacy (including original DP) converges to GDP in the limit under composition.
@@ -729,9 +729,20 @@
                         </a> &nbsp;&nbsp;
                         <a href="https://arxiv.org/abs/1905.11814" class="link-paper">[arxiv]</a>
                     </div>
-                    <!-- <div id="abs11" class="panel-footer panel-paper-footer collapse">
-                    ABSTRACT
-                    </div> -->
+                    <div id="abs11" class="panel-footer panel-paper-footer collapse">
+                    Sheer amount of computation in deep neural networks has pushed their execution to the cloud.
+                    This de facto cloud-hosted inference, however, raises serious privacy concerns as private data is communicated and stored in remote servers.
+                    The data could be mishandled by cloud providers, used for unsolicited analytics, or simply compromised through network and system security vulnerability.
+                    To that end, this paper devises SHREDDER that reduces the information content of the communicated data without diminishing the cloud's ability to maintain acceptably high accuracy.
+                    To that end, SHREDDER learns two sets of noise distributions whose samples, named multiplicative and additive noise tensors, are applied to the communicated data while maintaining the inference accuracy.
+                    The key idea is that SHREDDER learns these noise distributions offline without altering the topology or the weights of the pre-trained network.
+                    SHREDDER repeatedly learns sample noise tensors from the distributions by casting the tensors as a set of trainable parameters while keeping the weights constant.
+                    Since the key idea is learning the noise, we are able to devise a loss function that strikes a balance between accuracy and information degradation.
+                    To this end, we use self-supervision to train the noise tensors to achieve an intermediate representation of the data that contains less private information.
+                    Experimentation with real-world deep neural networks shows that, compared to the original execution, SHREDDER reduces the mutual information between the input and the communicated data by 66.90&#37;,
+                    and yields a misclassification rate of 94.5&#37; over private labels, significantly reducing adversary's ability to infer private data,
+                    while sacrificing only 1.74&#37; loss in accuracy without any knowledge about the private labels.
+                    </div>
                 </div>
                 <div class="panel panel-default panel-paper">
                     <div class="panel-body panel-paper-body">
@@ -744,9 +755,22 @@
                         </a> &nbsp;&nbsp;
                         <a href="https://arxiv.org/abs/1905.02383" class="link-paper">[arxiv]</a>
                     </div>
-                    <!-- <div id="abs12" class="panel-footer panel-paper-footer collapse">
-                    ABSTRACT
-                    </div> -->
+                    <div id="abs12" class="panel-footer panel-paper-footer collapse">
+                      Differential privacy has seen remarkable success as a rigorous and practical formalization of data privacy in the past decade.
+                      This privacy definition and its divergence based relaxations, however, have several acknowledged weaknesses, either in handling composition of private algorithms or in analyzing important primitives like privacy amplification by subsampling.
+                      Inspired by the hypothesis testing formulation of privacy, this paper proposes a new relaxation, which we term &#10077;f-differential privacy&#10078; (f-DP).
+                      This notion of privacy has a number of appealing properties and, in particular, avoids difficulties associated with divergence based relaxations.
+                      First, f-DP preserves the hypothesis testing interpretation.
+                      In addition, f-DP allows for lossless reasoning about composition in an algebraic fashion.
+                      Moreover, we provide a powerful technique to import existing results proven for original DP to f-DP and, as an application, obtain a simple subsampling theorem for f-DP.
+                      In addition to the above findings, we introduce a canonical single-parameter family of privacy notions within the f-DP class that is referred to as &#10077;Gaussian differential privacy&#10078; (GDP),
+                      defined based on testing two shifted Gaussians.
+                      GDP is focal among the f-DP class because of a central limit theorem we prove.
+                      More precisely, the privacy guarantees of any hypothesis testing based definition of privacy (including original DP) converges to GDP in the limit under composition.
+                      The CLT also yields a computationally inexpensive tool for analyzing the exact composition of private algorithms.
+                      Taken together, this collection of attractive properties render f-DP a mathematically coherent, analytically tractable, and versatile framework for private data analysis.
+                      Finally, we demonstrate the use of the tools we develop by giving an improved privacy analysis of noisy stochastic gradient descent.
+                    </div>
                 </div>
                 <div class="panel panel-default panel-paper">
                     <div class="panel-body panel-paper-body">
@@ -774,9 +798,16 @@
                         </a> &nbsp;&nbsp;
                         <a href="https://arxiv.org/abs/1904.10059" class="link-paper">[arxiv]</a>
                     </div>
-                    <!-- <div id="abs14" class="panel-footer panel-paper-footer collapse">
-                    ABSTRACT
-                    </div> -->
+                    <div id="abs14" class="panel-footer panel-paper-footer collapse">
+                    Many applications of machine learning, such as human health research, involve processing private or sensitive information.
+                    Privacy concerns may impose significant hurdles to collaboration in scenarios where there are multiple sites holding data and the goal is to estimate properties jointly across all datasets.
+                    Differentially private decentralized algorithms can provide strong privacy guarantees.
+                    However, the accuracy of the joint estimates may be poor when the datasets at each site are small.
+                    This paper proposes a new framework, Correlation Assisted Private Estimation (CAPE), for designing privacy-preserving decentralized algorithms with better accuracy guarantees in an honest-but-curious model.
+                    CAPE can be used in conjunction with the functional mechanism for statistical and machine learning optimization problems.
+                    A tighter characterization of the functional mechanism is provided that allows CAPE to achieve the same performance as a centralized algorithm in the decentralized setting using all datasets.
+                    Empirical results on regression and neural network problems for both synthetic and real datasets show that differentially private methods can be competitive with non-private algorithms in many scenarios of interest.
+                    </div>
                 </div>
                 <div class="panel panel-default panel-paper">
                     <div class="panel-body panel-paper-body">
@@ -789,9 +820,15 @@
                         </a> &nbsp;&nbsp;
                         <a href="https://arxiv.org/abs/1907.02444" class="link-paper">[arxiv]</a>
                     </div>
-                    <!-- <div id="abs15" class="panel-footer panel-paper-footer collapse">
-                    ABSTRACT
-                    </div> -->
+                    <div id="abs15" class="panel-footer panel-paper-footer collapse">
+                      Since its conception in 2006, differential privacy has emerged as the de-facto standard in data privacy, owing to its robust mathematical guarantees, generalised applicability and rich body of literature.
+                      Over the years, researchers have studied differential privacy and its applicability to an ever-widening field of topics.
+                      Mechanisms have been created to optimise the process of achieving differential privacy, for various data types and scenarios.
+                      Until this work however, all previous work on differential privacy has been conducted on a ad-hoc basis, without a single, unifying codebase to implement results.
+                      In this work, we present the IBM Differential Privacy Library, a general purpose, open source library for investigating, experimenting and developing differential privacy applications in the Python programming language.
+                      The library includes a host of mechanisms, the building blocks of differential privacy, alongside a number of applications to machine learning and other data analytics tasks.
+                      Simplicity and accessibility has been prioritised in developing the library, making it suitable to a wide audience of users, from those using the library for their first investigations in data privacy, to the privacy experts looking to contribute their own models and mechanisms for others to use.
+                    </div>
                 </div>
                 <div class="panel panel-default panel-paper">
                     <div class="panel-body panel-paper-body">
@@ -804,9 +841,17 @@
                         </a> &nbsp;&nbsp;
                         <a href="https://arxiv.org/abs/1906.03049" class="link-paper">[arxiv]</a>
                     </div>
-                    <!-- <div id="abs16" class="panel-footer panel-paper-footer collapse">
-                    ABSTRACT
-                    </div> -->
+                    <div id="abs16" class="panel-footer panel-paper-footer collapse">
+                    Differentially private (DP) machine learning has recently become popular.
+                    The privacy loss of DP algorithms is commonly reported using (&epsilon;,&delta;)-DP.
+                    In this paper, we propose a numerical accountant for evaluating the privacy loss for algorithms with continuous one dimensional output.
+                    This accountant can be applied to the subsampled multidimensional Gaussian mechanism which underlies the popular DP stochastic gradient descent.
+                    The proposed method is based on a numerical approximation of an integral formula which gives the exact (&epsilon;,&delta;)-values.
+                    The approximation is carried out by discretising the integral and by evaluating discrete convolutions using the fast Fourier transform algorithm.
+                    We give both theoretical error bounds and numerical error estimates for the approximation.
+                    Experimental comparisons with state-of-the-art techniques demonstrate significant improvements in bound tightness and/or computation time.
+                    Python code for the method can be found in Github.
+                    </div>
                 </div>
                 <div class="panel panel-default panel-paper">
                     <div class="panel-body panel-paper-body">
@@ -835,9 +880,19 @@
                         </a> &nbsp;&nbsp;
                         <a href="https://arxiv.org/pdf/1907.03372.pdf" class="link-paper">[arxiv]</a>
                     </div>
-                    <!-- <div id="abs18" class="panel-footer panel-paper-footer collapse">
-                    ABSTRACT
-                    </div> -->
+                    <div id="abs18" class="panel-footer panel-paper-footer collapse">
+                      Recently, there has been a wealth of effort devoted to the design of secure protocols for machine learning tasks.
+                      Much of this is aimed at enabling secure prediction from highly-accurate Deep Neural Networks (DNNs).
+                      However, as DNNs are trained on data, a key question is how such models can be also trained securely.
+                      The few prior works on secure DNN training have focused either on designing custom protocols for existing training algorithms
+                      or on developing tailored training algorithms and then applying generic secure protocols.
+                      In this work, we investigate the advantages of designing training algorithms alongside a novel secure protocol, incorporating optimizations on both fronts.
+                      We present QUOTIENT, a new method for discretized training of DNNs,
+                      along with a customized secure two-party protocol for it.
+                      QUOTIENT incorporates key components of state-of-the-art DNN training such as layer normalization and adaptive gradient methods,
+                      and improves upon the state-of-the-art in DNN training in two-party computation.
+                      Compared to prior work, we obtain an improvement of 50X in WAN time and 6&#37; in absolute accuracy.
+                    </div>
                 </div>
                 <div class="panel panel-default panel-paper">
                     <div class="panel-body panel-paper-body">
