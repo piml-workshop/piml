@@ -379,7 +379,26 @@
                     <tr>
                         <td colspan="2" class="hiddenRow">
                             <div class="accordion-body collapse talk-abstract" id="tabs8">
-                              More details coming soon
+                              A centrally differentially private algorithm maps raw data to differentially private outputs.
+                              In contrast, a locally differentially private algorithm
+                              may only access data through public interaction with data holders,
+                              and this interaction must be a differentially private function of the data.
+                              We study the intermediate model of pan-privacy.
+                              Unlike a locally private algorithm, a pan-private algorithm receives data in the clear.
+                              Unlike a centrally private algorithm,
+                              the algorithm receives data one element at a time
+                              and must maintain a differentially private internal state while processing this stream.
+                              First, we show that pan-privacy against multiple intrusions on the internal state is
+                              equivalent to sequentially interactive local privacy.
+                              Next, we contextualize pan-privacy against a single intrusion
+                              by analyzing the sample complexity of uniformity testing over domain [k].
+                              Focusing on the dependence on k,
+                              centrally private uniformity testing has sample complexity &Theta;(&radic;k),
+                              while noninteractive locally private uniformity testing has sample complexity &Theta;(k).
+                              We show that the sample complexity of pan-private uniformity testing is &Theta;(k<sup>2/3</sup>).
+                              By a new &Omega;(k) lower bound for the sequentially interactive setting,
+                              we also separate pan-private from sequentially interactive locally private
+                              and multi-intrusion pan-private uniformity testing.
                             </div>
                         </td>
                     </tr>
@@ -920,9 +939,21 @@
                         </a> &nbsp;&nbsp;
                         <a href="https://arxiv.org/abs/1905.12592" class="link-paper">[arxiv]</a>
                     </div>
-                    <!-- <div id="abs20" class="panel-footer panel-paper-footer collapse">
-                    ABSTRACT
-                    </div> -->
+                    <div id="abs20" class="panel-footer panel-paper-footer collapse">
+                    The use of inverse probability weighting (IPW) methods to
+                    estimate the causal effect of treatments from observational
+                    studies is widespread in econometrics, medicine and social
+                    sciences. Although these studies often involve sensitive
+                    information, thus far there has been no work on
+                    privacy-preserving IPW methods. We address this by
+                    providing a novel framework for privacy-preserving IPW
+                    (PP-IPW) methods. We include a theoretical analysis of the
+                    effects of our proposed privatisation procedure on the
+                    estimated average treatment effect, and evaluate our PP-IPW
+                    framework on synthetic, semi-synthetic and real datasets.
+                    The empirical results are consistent with our theoretical
+                    findings.
+                    </div>
                 </div>
                 <div class="panel panel-default panel-paper">
                     <div class="panel-body panel-paper-body">
@@ -935,9 +966,28 @@
                         </a> &nbsp;&nbsp;
                         <a href="https://arxiv.org/abs/1911.01452" class="link-paper">[arxiv]</a>
                     </div>
-                    <!-- <div id="abs21" class="panel-footer panel-paper-footer collapse">
-                    ABSTRACT
-                    </div> -->
+                    <div id="abs21" class="panel-footer panel-paper-footer collapse">
+                      A centrally differentially private algorithm maps raw data to differentially private outputs.
+                      In contrast, a locally differentially private algorithm
+                      may only access data through public interaction with data holders,
+                      and this interaction must be a differentially private function of the data.
+                      We study the intermediate model of pan-privacy.
+                      Unlike a locally private algorithm, a pan-private algorithm receives data in the clear.
+                      Unlike a centrally private algorithm,
+                      the algorithm receives data one element at a time
+                      and must maintain a differentially private internal state while processing this stream.
+                      First, we show that pan-privacy against multiple intrusions on the internal state is
+                      equivalent to sequentially interactive local privacy.
+                      Next, we contextualize pan-privacy against a single intrusion
+                      by analyzing the sample complexity of uniformity testing over domain [k].
+                      Focusing on the dependence on k,
+                      centrally private uniformity testing has sample complexity &Theta;(&radic;k),
+                      while noninteractive locally private uniformity testing has sample complexity &Theta;(k).
+                      We show that the sample complexity of pan-private uniformity testing is &Theta;(k<sup>2/3</sup>).
+                      By a new &Omega;(k) lower bound for the sequentially interactive setting,
+                      we also separate pan-private from sequentially interactive locally private
+                      and multi-intrusion pan-private uniformity testing.
+                    </div>
                 </div>
                 <div class="panel panel-default panel-paper">
                     <div class="panel-body panel-paper-body">
@@ -950,9 +1000,26 @@
                         </a> &nbsp;&nbsp;
                         <a href="http://www.vldb.org/pvldb/vol12/p1371-kotsogiannis.pdf" class="link-paper">[arxiv]</a>
                     </div>
-                    <!-- <div id="abs22" class="panel-footer panel-paper-footer collapse">
-                    ABSTRACT
-                    </div> -->
+                    <div id="abs22" class="panel-footer panel-paper-footer collapse">
+                    Differential privacy is considered a de facto standard for private data analysis.
+                    However, the definition and much of the supporting literature applies to flat tables.
+                    While there exist variants of the definition and specialized algorithms for specific types of relational data (e.g. graphs),
+                    there isn’t a general privacy definition for multi-relational schemas with constraints,
+                    and no system that permits accurate differentially private answering of SQL queries
+                    while imposing a fixed privacy budget across all queries posed by the analyst.
+                    This work presents PrivateSQL, a first-of-its-kind end-to-end differentially private relational database system.
+                    PrivateSQL allows an analyst to query data stored in a standard database management system
+                    using a rich class of SQL counting queries.
+                    PrivateSQL adopts a novel generalization of differential privacy to multi-relational data
+                    that takes into account constraints in the schema like foreign keys,
+                    and allows the data owner to flexibly specify entities in the schema that need privacy.
+                    PrivateSQL ensures a fixed privacy loss across all the queries posed by the analyst
+                    by answering queries on private synopses generated from several views over the base relation
+                    that are tuned to have low error on a representative query workload.
+                    We experimentally evaluate PrivateSQL on a real-world dataset and a work-load of more than 3,600 queries.
+                    We show that for 50&#37; of the queries PrivateSQL offers at least 1,000x better error rates
+                    than solutions adapted from prior work.
+                    </div>
                 </div>
                 <div class="panel panel-default panel-paper">
                     <div class="panel-body panel-paper-body">
@@ -1026,9 +1093,21 @@
                         </a> &nbsp;&nbsp;
                         <a href="https://arxiv.org/abs/1909.09836" class="link-paper">[arxiv]</a>
                     </div>
-                    <!-- <div id="abs27" class="panel-footer panel-paper-footer collapse">
-                    ABSTRACT
-                    </div> -->
+                    <div id="abs27" class="panel-footer panel-paper-footer collapse">
+                      Motivated by privacy concerns in many practical applications such as Federated Learning,
+                      we study a stylized private sequential learning problem:
+                      a learner tries to estimate an unknown scalar value,
+                      by sequentially querying an external database and receiving binary responses;
+                      meanwhile, a third-party adversary observes the learner's queries but not the responses.
+                      The learner's goal is to design a querying strategy with the minimum number of queries
+                      (optimal query complexity) so that she can accurately estimate the true value,
+                      while the adversary even with the complete knowledge of her querying strategy cannot.
+                      Prior work has obtained both upper and lower bounds on the optimal query complexity,
+                      however, these upper and lower bounds have a large gap in general.
+                      In this paper, we construct new querying strategies and prove almost matching upper and lower bounds,
+                      providing a complete characterization of the optimal query complexity
+                      as a function of the estimation accuracy and the desired levels of privacy. 
+                    </div>
                 </div>
                 <div class="panel panel-default panel-paper">
                     <div class="panel-body panel-paper-body">
