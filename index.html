@@ -998,7 +998,7 @@
                         <a data-toggle="collapse" href="#abs22" class="paper-title">
                         PrivateSQL: A Differentially Private SQL Query Engine
                         </a> &nbsp;&nbsp;
-                        <a href="http://www.vldb.org/pvldb/vol12/p1371-kotsogiannis.pdf" class="link-paper">[arxiv]</a>
+                        <a href="http://www.vldb.org/pvldb/vol12/p1371-kotsogiannis.pdf" class="link-paper">[pdf]</a>
                     </div>
                     <div id="abs22" class="panel-footer panel-paper-footer collapse">
                     Differential privacy is considered a de facto standard for private data analysis.
@@ -1106,7 +1106,7 @@
                       however, these upper and lower bounds have a large gap in general.
                       In this paper, we construct new querying strategies and prove almost matching upper and lower bounds,
                       providing a complete characterization of the optimal query complexity
-                      as a function of the estimation accuracy and the desired levels of privacy. 
+                      as a function of the estimation accuracy and the desired levels of privacy.
                     </div>
                 </div>
                 <div class="panel panel-default panel-paper">
@@ -1120,9 +1120,11 @@
                         </a> &nbsp;&nbsp;
                         <a href="https://arxiv.org/abs/1910.10871" class="link-paper">[arxiv]</a>
                     </div>
-                    <!-- <div id="abs28" class="panel-footer panel-paper-footer collapse">
-                    ABSTRACT
-                    </div> -->
+                    <div id="abs28" class="panel-footer panel-paper-footer collapse">
+                    We propose improving the privacy properties of a dataset by publishing only a strategically chosen "core-set" of the data containing a subset of the instances.
+                    The core-set allows strong performance on primary tasks, but forces poor performance on unwanted tasks.
+                    We give methods for both linear models and neural networks and demonstrate their efficacy on data.
+                    </div>
                 </div>
                 <div class="panel panel-default panel-paper">
                     <div class="panel-body panel-paper-body">
@@ -1165,9 +1167,16 @@
                         </a> &nbsp;&nbsp;
                         <a href="https://arxiv.org/abs/1910.13212" class="link-paper">[arxiv]</a>
                     </div>
-                    <!-- <div id="abs31" class="panel-footer panel-paper-footer collapse">
-                    ABSTRACT
-                    </div> -->
+                    <div id="abs31" class="panel-footer panel-paper-footer collapse">
+                    Many mobile applications and virtual conversational agents now aim to recognize and adapt to emotions.
+                    To enable this, data are transmitted from users' devices and stored on central servers.
+                    Yet, these data contain sensitive information that could be used by mobile applications without user's consent or, maliciously, by an eavesdropping adversary.
+                    In this work, we show how multimodal representations trained for a primary task, here emotion recognition, can unintentionally leak demographic information, which could override a selected opt-out option by the user.
+                    We analyze how this leakage differs in representations obtained from textual, acoustic, and multimodal data.
+                    We use an adversarial learning paradigm to unlearn the private information present in a representation and investigate the effect of varying the strength of the adversarial component on the primary task and on the privacy metric, defined here as the inability of an attacker to predict specific demographic information.
+                    We evaluate this paradigm on multiple datasets and show that we can improve the privacy metric while not significantly impacting the performance on the primary task.
+                    To the best of our knowledge, this is the first work to analyze how the privacy metric differs across modalities and how multiple privacy concerns can be tackled while still maintaining performance on emotion recognition.
+                    </div>
                 </div>
                 <div class="panel panel-default panel-paper">
                     <div class="panel-body panel-paper-body">
@@ -1180,9 +1189,16 @@
                         </a> &nbsp;&nbsp;
                         <a href="https://arxiv.org/abs/1911.10563" class="link-paper">[arxiv]</a>
                     </div>
-                    <!-- <div id="abs32" class="panel-footer panel-paper-footer collapse">
-                    ABSTRACT
-                    </div> -->
+                    <div id="abs32" class="panel-footer panel-paper-footer collapse">
+                    In many real-world applications of machine learning, data are distributed across many clients and cannot leave the devices they are stored on.
+                    Furthermore, each client's data, computational resources and communication constraints may be very different.
+                    This setting is known as federated learning, in which privacy is a key concern.
+                    Differential privacy is commonly used to provide mathematical privacy guarantees.
+                    This work, to the best of our knowledge, is the first to consider federated, differentially private, Bayesian learning.
+                    We build on Partitioned Variational Inference (PVI) which was recently developed to support approximate Bayesian inference in the federated setting.
+                    We modify the client-side optimisation of PVI to provide an (&varepsilon;, &delta;)-DP guarantee.
+                    We show that it is possible to learn moderately private logistic regression models in the federated setting that achieve similar performance to models trained non-privately on centralised data.
+                    </div>
                 </div>
                 <div class="panel panel-default panel-paper">
                     <div class="panel-body panel-paper-body">
@@ -1193,11 +1209,21 @@
                         <a data-toggle="collapse" href="#abs33" class="paper-title">
                         Privacy preserving Neural Network Inference on Encrypted Data with GPUs
                         </a> &nbsp;&nbsp;
-                        <!-- <a href="https://arxiv.org" class="link-paper">[arxiv]</a> -->
+                        <a href="https://arxiv.org/abs/1911.11377" class="link-paper">[arxiv]</a>
                     </div>
-                    <!-- <div id="abs33" class="panel-footer panel-paper-footer collapse">
-                    ABSTRACT
-                    </div> -->
+                    <div id="abs33" class="panel-footer panel-paper-footer collapse">
+                      Machine Learning as a Service (MLaaS) has become a growing trend in recent years and several such services are currently offered.
+                      MLaaS is essentially a set of services that provides machine learning tools and capabilities as part of cloud computing services.
+                      In these settings, the cloud has pre-trained models that are deployed and large computing capacity whereas the clients can use these models to make predictions without having to worry about maintaining the models and the service.
+                      However, the main concern with MLaaS is the privacy of the client's data.
+                      Although there have been several proposed approaches in the literature to run machine learning models on encrypted data, the performance is still far from being satisfactory for practical use.
+                      In this paper, we aim to accelerate the performance of running machine learning on encrypted data using combination of Fully Homomorphic Encryption (FHE), Convolutional Neural Networks (CNNs) and Graphics Processing Units (GPUs).
+                      We use a number of optimization techniques, and efficient GPU-based implementation to achieve high performance.
+                      We evaluate a CNN whose architecture is similar to AlexNet to classify homomorphically encrypted samples from the Cars Overhead With Context (COWC) dataset.
+                      To the best of our knowledge, it is the first time such a complex network and large dataset is evaluated on encrypted data.
+                      Our approach achieved reasonable classification accuracy of 95% for the COWC dataset.
+                      In terms of performance, our results show that we could achieve several thousands times speed up when we implement GPU-accelerated FHE operations on encrypted floating point numbers.
+                    </div>
                 </div>
                 <div class="panel panel-default panel-paper">
                     <div class="panel-body panel-paper-body">
@@ -1225,9 +1251,15 @@
                         </a> &nbsp;&nbsp;
                         <a href="https://arxiv.org/abs/1910.01177" class="link-paper">[arxiv]</a>
                     </div>
-                    <!-- <div id="abs35" class="panel-footer panel-paper-footer collapse">
-                    ABSTRACT
-                    </div> -->
+                    <div id="abs35" class="panel-footer panel-paper-footer collapse">
+                    Broad adoption of machine learning techniques has increased privacy concerns for models trained on sensitive data such as medical records.
+                    Existing techniques for training differentially private (DP) models give rigorous privacy guarantees,
+                    but applying these techniques to neural networks can severely degrade model performance.
+                    This performance reduction is an obstacle to deploying private models in the real world.
+                    In this work, we improve the performance of DP models by fine-tuning them through active learning on public data.
+                    We introduce two new techniques - DIVERSEPUBLIC and NEARPRIVATE - for doing this fine-tuning in a privacy-aware way.
+                    For the MNIST and SVHN datasets, these techniques improve state-of-the-art accuracy for DP models while retaining privacy guarantees.
+                    </div>
                 </div>
                 <div class="panel panel-default panel-paper">
                     <div class="panel-body panel-paper-body">
