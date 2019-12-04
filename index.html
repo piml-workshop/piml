@@ -641,7 +641,7 @@
                     Reinforcement learning algorithms are known to be sample inefficient, and often performance on one task can be substantially improved by leveraging information (e.g., via pre-training) on other related tasks.
                     In this work, we propose a technique to achieve such knowledge transfer in cases where agent trajectories contain sensitive or private information, such as in the healthcare domain.
                     Our approach leverages a differentially private policy evaluation algorithm to initialize an actor-critic model and improve the effectiveness of learning in downstream tasks.
-                    We empirically show this technique increases sample efficiency in resource-constrained control problems while preserving the privacy of trajectories collected in an upstream task. 
+                    We empirically show this technique increases sample efficiency in resource-constrained control problems while preserving the privacy of trajectories collected in an upstream task.
                     </div>
                 </div>
                 <div class="panel panel-default panel-paper">
@@ -1342,17 +1342,30 @@
                 <div class="panel panel-default panel-paper">
                     <div class="panel-body panel-paper-body">
                         <span class="paper-author">
-                        Julius Adebayo
+                        Julius Adebayo, Hal Abelson and Danny Weitzner
                         </span>
                         <br />
                         <a data-toggle="collapse" href="#abs41" class="paper-title">
                         Tensions Between Differential Privacy and Local Explanations for Deep Neural Networks
                         </a> &nbsp;&nbsp;
-                        <!-- <a href="https://arxiv.org" class="link-paper">[arxiv]</a> -->
+                        <a href="https://www.dropbox.com/s/exeul9eprt3as5m/dp_explanations_neurips_workshop.pdf?dl=0" class="link-paper">[pdf]</a>
                     </div>
-                    <!-- <div id="abs41" class="panel-footer panel-paper-footer collapse">
-                    ABSTRACT
-                    </div> -->
+                    <div id="abs41" class="panel-footer panel-paper-footer collapse">
+                    As deep learning models are beginning to be applied in high stakes and consequential settings,
+                    there has been increased interest in interpretability methods for gaining insight into these models.
+                    Similarly, privacy is also of paramount importance in these settings.
+                    Here, we examine tradeoffs that occur between feature attribution maps,
+                    an increasingly popular medium to provide interpretations, and model privacy.
+                    Attribution maps reveal information about the features of the input that have the most relevance to the output of a model.
+                    On the other hand, differential privacy (DP) seeks to protect against learning information about individual inputs.
+                    Consequently, both requirements seem to be at odds.
+                    More distressingly, Shokri et al.[1] recently showed that one can infer training set membership using attribution maps.
+                    Towards this end, we consider attribution maps derived from models trained to be differentially private.
+                    Empirically, we find that there is a trade-off between privacy and interpretability.
+                    Attribution maps that seek to reconstruct the input are not sensitive to the privacy level of the model,
+                    and consequently reveal the input.
+                    On the other hand, attributions that show sensitivity to model privacy degrade sharply in visual coherence.
+                    </div>
                 </div>
                 <div class="panel panel-default panel-paper">
                     <div class="panel-body panel-paper-body">
