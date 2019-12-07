@@ -420,7 +420,20 @@
                     <tr>
                         <td colspan="2" class="hiddenRow">
                             <div class="accordion-body collapse talk-abstract" id="tabs9">
-                            More details coming soon
+                              We study differentially private (DP) algorithms for stochastic convex optimization:
+                              the problem of minimizing the population loss given i.i.d. samples from a distribution over convex loss functions.
+                              A recent work of Bassily et al. (2019) has established the optimal bound on the excess population loss achievable given n samples.
+                              Unfortunately, their algorithm achieving this bound is relatively inefficient:
+                              it requires O(min{n<sup>3/2</sup>,n<sup>5/2</sup>/d}) gradient computations, where d is the dimension of the optimization problem.
+
+                              We describe two new techniques for deriving DP convex optimization algorithms both achieving the optimal bound on excess loss and using O(min{n,n<sup>2</sup>/d}) gradient computations.
+                              In particular, the algorithms match the running time of the optimal non-private algorithms.
+                              The first approach relies on the use of variable batch sizes and is analyzed using the privacy amplification by iteration technique of Feldmanet al. (2018).
+                              The second approach is based on a general reduction to the problem of localizing an approximately optimal solution with differential privacy.
+                              Such localization, in turn, can be achieved using existing (non-private) uniformly stable optimization algorithms.
+                              As in the earlier work, our algorithms require a mild smoothness assumption.
+                              We also give a linear-time algorithm achieving the optimal bound on the excess loss for the strongly convex case,
+                              as well as a faster algorithm for the non-smooth case.
                             </div>
                         </td>
                     </tr>
@@ -1064,11 +1077,24 @@
                         Private Stochastic Convex Optimization: Optimal Rates in Linear Time
                         <font color="#d07200"><b>(contributed talk)</b></font>
                         </a> &nbsp;&nbsp;
-                        <!-- <a href="https://arxiv.org" class="link-paper">[arxiv]</a> -->
+                        <a href="http://vtaly.net/papers/FKT_fast_DPSCO.pdf" class="link-paper">[pdf]</a>
                     </div>
-                    <!-- <div id="abs25" class="panel-footer panel-paper-footer collapse">
-                    ABSTRACT
-                    </div> -->
+                    <div id="abs25" class="panel-footer panel-paper-footer collapse">
+                    We study differentially private (DP) algorithms for stochastic convex optimization:
+                    the problem of minimizing the population loss given i.i.d. samples from a distribution over convex loss functions.
+                    A recent work of Bassily et al. (2019) has established the optimal bound on the excess population loss achievable given n samples.
+                    Unfortunately, their algorithm achieving this bound is relatively inefficient:
+                    it requires O(min{n<sup>3/2</sup>,n<sup>5/2</sup>/d}) gradient computations, where d is the dimension of the optimization problem.
+
+                    We describe two new techniques for deriving DP convex optimization algorithms both achieving the optimal bound on excess loss and using O(min{n,n<sup>2</sup>/d}) gradient computations.
+                    In particular, the algorithms match the running time of the optimal non-private algorithms.
+                    The first approach relies on the use of variable batch sizes and is analyzed using the privacy amplification by iteration technique of Feldmanet al. (2018).
+                    The second approach is based on a general reduction to the problem of localizing an approximately optimal solution with differential privacy.
+                    Such localization, in turn, can be achieved using existing (non-private) uniformly stable optimization algorithms.
+                    As in the earlier work, our algorithms require a mild smoothness assumption.
+                    We also give a linear-time algorithm achieving the optimal bound on the excess loss for the strongly convex case,
+                    as well as a faster algorithm for the non-smooth case.
+                    </div>
                 </div>
                 <div class="panel panel-default panel-paper">
                     <div class="panel-body panel-paper-body">
