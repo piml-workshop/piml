@@ -205,8 +205,8 @@
                         Invited talk:
                         <a href="#tabs2" data-toggle="collapse" class="accordion-toggle">
                         Brendan McMahan
-                        <!-- &mdash;
-                        title -->
+                        &mdash;
+                        Privacy for Federated Learning, and Federated Learning for Privacy
                         </a>&nbsp;&nbsp;
                         <!-- <a href="slides/slides.pdf" class="link-paper">[slides]</a> -->
                         </td>
@@ -358,7 +358,9 @@
                     <tr>
                         <td colspan="2" class="hiddenRow">
                             <div class="accordion-body collapse talk-abstract" id="tabs7">
-                            More details coming soon
+                              There is a growing demand for ML methods that limit inappropriate use of protected information to avoid both disparate treatment and disparate impact. In this talk, we present Generative Adversarial rePresentations (GAP) as a data-driven framework that leverages recent advancements in adversarial learning to allow a data holder to learn universal representations that decouple a set of sensitive attributes from the rest of the dataset while allowing learning multiple downstream tasks. We will briefly highlight the theoretical and practical results of GAP.
+                              <br><br>
+                              In the second half of the talk we will focus on model auditing. Privacy concerns have led to the development of privacy-preserving approaches for learning models from sensitive data. Yet, in practice, models (even those learned with privacy guarantees) can inadvertently memorize unique training examples or leak sensitive features. To identify such privacy violations, existing model auditing techniques use finite adversaries defined as machine learning models with (a) access to some finite side information (e.g., a small auditing dataset), and (b) finite capacity (e.g., a fixed neural network architecture). In the second half of the talk, we present requirements under which an unsuccessful attempt to identify privacy violations by a finite adversary implies that no stronger adversary can succeed at such a task. We will do so via parameters that quantify the capabilities of the finite adversary, including the size of the neural network employed by such an adversary and the amount of side information it has access to as well as the regularity of the (perhaps privacy-guaranteeing) audited model.
                             </div>
                         </td>
                     </tr>
@@ -620,9 +622,21 @@
                         </a> &nbsp;&nbsp;
                         <a href="papers/PriML2019_paper_5.pdf" class="link-paper">[pdf]</a>
                     </div>
-                    <!-- <div id="abs4" class="panel-footer panel-paper-footer collapse">
-                    ABSTRACT
-                    </div> -->
+                    <div id="abs4" class="panel-footer panel-paper-footer collapse">
+                    In this paper, we study the problem of estimating smooth Generalized Linear Models (GLM) in the Non-interactive Local Differential Privacy (NLDP) model.
+                    Different from its classical setting, our model allows the server to process some additional public but unlabeled data.
+                    By using Stein’s lemma and its variants, we first show that there is an
+                    (&varepsilon;,&delta;)-NLDP algorithm for GLM (under some mild assumptions),
+                    if each data record is i.i.d sampled from some sub-Gaussian distribution with bounded &ell;<sub>1</sub>-norm.
+                    Then with high probability, the sample complexity of public and private data,
+                    for the algorithm to achieve an α estimation error (in &ell;<sub>&infin;</sub>-norm),
+                    is O(p<sup>2</sup>&alpha;<sup>−2</sup>) and O(p<sup>2</sup>&alpha;<sup>−2</sup>&varepsilon;<sup>−2</sup>) respectively
+                    if &alpha; is not too small (i.e., &alpha; ≥ &Omega;(1/√p)),
+                    where p is the dimensionality of the data.
+                    This is a significant improvement over the previously known quasi-polynomial (in &alpha;)
+                    or exponential (in p) complexity of GLM with no public data.
+                    We demonstrate the effectiveness of our algorithms through experiments on both synthetic and real world datasets.
+                    </div>
                 </div>
                 <div class="panel panel-default panel-paper">
                     <div class="panel-body panel-paper-body">
@@ -635,9 +649,16 @@
                         </a> &nbsp;&nbsp;
                         <a href="papers/PriML2019_paper_6.pdf" class="link-paper">[pdf]</a>
                     </div>
-                    <!-- <div id="abs5" class="panel-footer panel-paper-footer collapse">
-                    ABSTRACT
-                    </div> -->
+                    <div id="abs5" class="panel-footer panel-paper-footer collapse">
+                    Research into challenges of machine learning models typically considers the security domain and the privacy domain separately.
+                    It is thus unclear whether the defenses in one domain will have any unexpected impact on the other domain.
+                    In this paper, we combine two domains together by investigating the interplay between membership inference and
+                    robustness against adversarial examples in machine learning.
+                    By performing membership inference attacks against both robust models and natural (undefended) models,
+                    we find that the adversarial defense methods, although increase the model robustness against adversarial examples,
+                    also make the model more vulnerable to membership inference attacks,
+                    indicating a potential conflict between privacy and robustness in machine learning.
+                    </div>
                 </div>
                 <div class="panel panel-default panel-paper">
                     <div class="panel-body panel-paper-body">
@@ -694,9 +715,25 @@
                         </a> &nbsp;&nbsp;
                         <a href="papers/PriML2019_paper_11.pdf" class="link-paper">[pdf]</a>
                     </div>
-                    <!-- <div id="abs8" class="panel-footer panel-paper-footer collapse">
-                    ABSTRACT
-                    </div> -->
+                    <div id="abs8" class="panel-footer panel-paper-footer collapse">
+                    We consider the problem of learning Markov Random Fields,
+                    particularly the special case of the Ising model,
+                    under the constraint of differential privacy.
+                    This includes both structure learning,
+                    where we try to estimate the underlying graph structure of the model,
+                    as well as the harder goal of parameter learning,
+                    in which we additionally estimate the parameter on each clique.
+                    We provide algorithms and lower bounds for both problems under a variety of privacy models.
+                    While the non-private sample complexity bounds for these two problems are both logarithmic in the dimension,
+                    we show that this is not the case under differential privacy.
+                    In particular, we investigate the sample complexity bounds for both problems under the constraints of pure,
+                    approximate, and concentrated differential privacy.
+                    We show that only structure learning under approximate differential privacy
+                    has logarithmic sample complexity in the dimension,
+                    while a change in either the learning goal or the privacy notion would necessitate a polynomial dependence.
+                    This suggests that if we are operating on very high-dimensional data,
+                    the aforementioned setting is the only one which is tractable.
+                    </div>
                 </div>
                 <div class="panel panel-default panel-paper">
                     <div class="panel-body panel-paper-body">
@@ -818,9 +855,20 @@
                         </a> &nbsp;&nbsp;
                         <a href="papers/PriML2019_paper_17.pdf" class="link-paper">[pdf]</a>
                     </div>
-                    <!-- <div id="abs13" class="panel-footer panel-paper-footer collapse">
-                    ABSTRACT
-                    </div> -->
+                    <div id="abs13" class="panel-footer panel-paper-footer collapse">
+                    We show how to solve linear programs whose constraints
+                    depend on private data. Existing techniques allow constraint
+                    violations whose magnitude is bounded interms of the
+                    differential privacy parameters &varepsilon; and &delta;.
+                    In many applications, however, the constraints cannot be violated under any circumstances.
+                    We demonstrate that straightforward applications of common differential privacy tools,
+                    such as Laplace noise and the exponential mechanism,
+                    are inadequate for guaranteeing that the constraints are satisfied.
+                    We then present a new differentially private mechanism that takes as input a linear program
+                    and releases a solution that satisfies the constraints and differs from the optimal solution
+                    by only a small amount.
+                    Empirically, we show that alternative mechanisms do violate constraints in practice.
+                    </div>
                 </div>
                 <div class="panel panel-default panel-paper">
                     <div class="panel-body panel-paper-body">
@@ -899,9 +947,17 @@
                         </a> &nbsp;&nbsp;
                         <a href="papers/PriML2019_paper_21.pdf" class="link-paper">[pdf]</a>
                     </div>
-                    <!-- <div id="abs17" class="panel-footer panel-paper-footer collapse">
-                    ABSTRACT
-                    </div> -->
+                    <div id="abs17" class="panel-footer panel-paper-footer collapse">
+                    Differential privacy allows quantifying privacy loss from computations using sensitive personal data.
+                    This loss grows with the number of accesses to the data,
+                    making it hard to open the use of such data while respecting privacy.
+                    Instead of accessing the data multiple times,
+                    we propose a method of fitting a probabilistic model on the data using privacy preserving modelling techniques.
+                    From this probabilistic model we sample a new synthetic dataset that may be subjected to unlimited amount of future analysis,
+                    without affecting the privacy guarantees.
+                    We demonstrate empirically that similar statistical discoveries can be made from the synthetic as the original data.
+                    We expect the method to have broad use in sharing anonymized versions of key data sets for research.
+                    </div>
                 </div>
                 <div class="panel panel-default panel-paper">
                     <div class="panel-body panel-paper-body">
@@ -940,9 +996,24 @@
                         </a> &nbsp;&nbsp;
                         <a href="papers/PriML2019_paper_23.pdf" class="link-paper">[pdf]</a>
                     </div>
-                    <!-- <div id="abs19" class="panel-footer panel-paper-footer collapse">
-                    ABSTRACT
-                    </div> -->
+                    <div id="abs19" class="panel-footer panel-paper-footer collapse">
+                    In recent years, deep learning has achieved overwhelming success,
+                    spanning from discriminative models to generative models.
+                    In particular, generative adversarial networks (GANs) have facilitated
+                    a new level of performance in a myriad of areas,
+                    ranging from media manipulation to sanitized dataset generation.
+                    Despite the great success, the potential risks of privacy breach caused by GANs
+                    have not been analyzed systematically.
+                    In this paper, we focus on membership inference attack against GANs
+                    that reveals information about the training data used for victim models.
+                    Specifically,  we present the first taxonomy of membership inference attacks,
+                    comprising not only existing attacks but also our novel ones.
+                    In addition, we propose the first generic attack model that can be instantiated
+                    in a large range of settings according to the adversary’s knowledge about the victim models.
+                    We complement the systematic analysis of attack performance by a comprehensive experimental  study,
+                    that  investigates  the  effectiveness  of  various  attacks  w.r.t. model type and training configurations,
+                    over three diverse application scenarios (i.e., images, medical data, and location data).
+                    </div>
                 </div>
                 <div class="panel panel-default panel-paper">
                     <div class="panel-body panel-paper-body">
@@ -1048,9 +1119,31 @@
                         </a> &nbsp;&nbsp;
                         <a href="papers/PriML2019_paper_28.pdf" class="link-paper">[pdf]</a>
                     </div>
-                    <!-- <div id="abs23" class="panel-footer panel-paper-footer collapse">
-                    ABSTRACT
-                    </div> -->
+                    <div id="abs23" class="panel-footer panel-paper-footer collapse">
+                    Deep learning as a service paradigms are increasingly
+                    employed for image-based applications spanning surveillance,
+                    healthcare, biometrics, and e-commerce. Typically, trained
+                    convolutional neural networks (CNNs) are hosted on cloud
+                    infrastructure, and applied for inference on input images.
+                    There is interest in approaches to enhance data privacy and
+                    security in such settings. Fully homomorphic encryption (FHE)
+                    can address this need as it caters to computations on
+                    encrypted data, but poses intensive computational burden.
+                    Prior works have proposed approaches to alleviate this burden
+                    for 32×32 images, but practical applications require at least
+                    10X higher resolution. Here, we present CareNets: Compact
+                    and Resource Efficient CNN for homomorphic inference on
+                    encrypted high-resolution images. Our approach is based on a
+                    novel compact packing scheme that packs CNN inputs, weights
+                    and activations densely into HE ciphertexts; and integrates
+                    them into the CNN computation flow. We implement CareNets
+                    using a GPU-accelerated FHE library for CNN inference on
+                    encrypted retinal images of size 96×96 and 256×256. Our
+                    results show that CareNets achieves over 32.78X speedup,
+                    45X improvement in memory efficiency, and 5851X reduction
+                    in transferred message size while maintaining accuracy within
+                    3% of the non-encrypted CNN baselines.
+                    </div>
                 </div>
                 <div class="panel panel-default panel-paper">
                     <div class="panel-body panel-paper-body">
@@ -1063,9 +1156,19 @@
                         </a> &nbsp;&nbsp;
                         <a href="papers/PriML2019_paper_29.pdf" class="link-paper">[pdf]</a>
                     </div>
-                    <!-- <div id="abs24" class="panel-footer panel-paper-footer collapse">
-                    ABSTRACT
-                    </div> -->
+                    <div id="abs24" class="panel-footer panel-paper-footer collapse">
+                    Traditional methods for adding locally private noise to bag-of-words features
+                    overwhelm the true signal in the text data, removing the properties of sparsity
+                    and non-negativity often relied upon by distributional semantic models. We
+                    argue the formulation of limited-precision local privacy, which guarantees
+                    privacy between documents of less than a user-specified maximum distance, is a
+                    more appropriate framework for bag-of-words features. To reduce the number of
+                    features to which we must add random noise, we also compress word features before
+                    adding noise, then decompress those features before model inference. We test
+                    randomized methods of aggregation as well as methods informed by distributional
+                    properties of words. Applying LDA and LSA to synthetic and real data, we show that
+                    these approaches produce distributional models closer to those in the original data.
+                    </div>
                 </div>
                 <div class="panel panel-default panel-paper">
                     <div class="panel-body panel-paper-body">
@@ -1103,13 +1206,30 @@
                         </span>
                         <br />
                         <a data-toggle="collapse" href="#abs26" class="paper-title">
-                        Crypt&#949;: Crypto-Assisted Differential Privacy on Untrusted Servers
+                        Crypt&varepsilon;: Crypto-Assisted Differential Privacy on Untrusted Servers
                         </a> &nbsp;&nbsp;
                         <a href="papers/PriML2019_paper_31.pdf" class="link-paper">[pdf]</a>
                     </div>
-                    <!-- <div id="abs26" class="panel-footer panel-paper-footer collapse">
-                    ABSTRACT
-                    </div> -->
+                    <div id="abs26" class="panel-footer panel-paper-footer collapse">
+                    In this work, we propose, Crypt&varepsilon;, a system and programming framework that
+                    (1) achieves the accuracy guarantees and algorithmic expressibility of
+                    the central model (2) without any trusted data collector like in the
+                    local model. Crypt&varepsilon; achieves the “best of both worlds” by employing two
+                    non-colluding untrusted servers that run DP programs on encrypted data
+                    from the data owners. Although straightforward implementations of DP
+                    programs using secure computation tools can achieve the above goal
+                    theoretically, in practice they are beset with many challenges such as
+                    poor performance and tricky security proofs. To this end, Crypt&varepsilon; allows data
+                    analysts to author logical DP programs that are automatically translated to
+                    secure protocols that work on encrypted data. These protocols ensure that
+                    the untrusted servers learn nothing more than the noisy outputs, thereby
+                    guaranteeing &varepsilon;-DP for all Crypt&varepsilon; programs. Crypt&varepsilon; supports a rich class of DP
+                    programs that can be expressed via a small set of transformation and
+                    measurement operators followed by arbitrary post-processing.  Further, we
+                    propose performance optimizations leveraging the fact that the output is
+                    noisy. We demonstrate Crypt&varepsilon;’s feasibility for practical DP analysis with
+                    extensive empirical evaluations on real datasets.
+                    </div>
                 </div>
                 <div class="panel panel-default panel-paper">
                     <div class="panel-body panel-paper-body">
@@ -1166,9 +1286,21 @@
                         </a> &nbsp;&nbsp;
                         <a href="papers/PriML2019_paper_34.pdf" class="link-paper">[pdf]</a>
                     </div>
-                    <!-- <div id="abs29" class="panel-footer panel-paper-footer collapse">
-                    ABSTRACT
-                    </div> -->
+                    <div id="abs29" class="panel-footer panel-paper-footer collapse">
+                    In this paper, we aim to develop a novel mechanism to preserve
+                    differential privacy (DP) in lifelong learning (L2M) for
+                    deep neural networks.  Our key idea is to employ functional
+                    perturbation approaches in an original algorithm to preserve
+                    DP in both learning new tasks and memorizing acquired tasks
+                    in the past. Theoretical analysis shows that our mechanism
+                    significantly tighten the privacy loss, by avoiding the
+                    privacy budget accumulated in the continual learning and
+                    memorizing processes.  Thorough evaluations show the
+                    effectiveness of our mechanism in preserving DP in L2M. Our
+                    study opens a new research avenue by uncovering the trade-off
+                    among privacy loss, model utility, and computational
+                    efficiency in L2M.
+                    </div>
                 </div>
                 <div class="panel panel-default panel-paper">
                     <div class="panel-body panel-paper-body">
@@ -1181,9 +1313,14 @@
                         </a> &nbsp;&nbsp;
                         <a href="papers/PriML2019_paper_36.pdf" class="link-paper">[pdf]</a>
                     </div>
-                    <!-- <div id="abs30" class="panel-footer panel-paper-footer collapse">
-                    ABSTRACT
-                    </div> -->
+                    <div id="abs30" class="panel-footer panel-paper-footer collapse">
+                    We provide novel approximation algorithms for anonymizing list data.
+                    List data is ubiquitous in ML applications,
+                    for instance in graph adjacency lists or in sparse matrix representations.
+                    We introduce a novel notion of anonymity in list datasets,
+                    and present polynomial time approximation algorithm for anonymizing such datasets.
+                    We show how this notion anonymity allows us to improve over current approximation results for k-anonymization.
+                    </div>
                 </div>
                 <div class="panel panel-default panel-paper">
                     <div class="panel-body panel-paper-body">
@@ -1263,11 +1400,17 @@
                         <a data-toggle="collapse" href="#abs34" class="paper-title">
                         Location Trace Privacy Under Conditional Priors
                         </a> &nbsp;&nbsp;
-                        <!-- <a href="CaseyMeehanPutYourLinkHere" class="link-paper">[pdf]</a> -->
+                        <a href="https://arxiv.org/abs/1912.04228" class="link-paper">[arxiv]</a>
                     </div>
-                    <!-- <div id="abs34" class="panel-footer panel-paper-footer collapse">
-                    ABSTRACT
-                    </div> -->
+                    <div id="abs34" class="panel-footer panel-paper-footer collapse">
+                    Providing meaningful privacy to users of location based services is particularly challenging when
+                    multiple locations are revealed in a short period of time. This is primarily due to the tremendous
+                    degree of dependence that can be anticipated between points. We propose a Rényi differentially private
+                    framework for bounding expected privacy loss for conditionally dependent data. Additionally,
+                    we demonstrate an algorithm for achieving this privacy under Gaussian process conditional priors.
+                    This framework both exemplifies why conditionally dependent data is so challenging to protect
+                    and offers a strategy for preserving privacy to within a fixed radius for every user location in a trace.
+                    </div>
                 </div>
                 <div class="panel panel-default panel-paper">
                     <div class="panel-body panel-paper-body">
@@ -1301,9 +1444,19 @@
                         </a> &nbsp;&nbsp;
                         <a href="papers/PriML2019_paper_43.pdf" class="link-paper">[pdf]</a>
                     </div>
-                    <!-- <div id="abs36" class="panel-footer panel-paper-footer collapse">
-                    ABSTRACT
-                    </div> -->
+                    <div id="abs36" class="panel-footer panel-paper-footer collapse">
+                    Discovering samples or features which leak information about
+                    correlated private data is a key challenge in designing
+                    context-aware privacy mechanisms. In this paper, we propose
+                    a framework to discover information-leaking samples and
+                    features based on an information-theoretic quantity known as
+                    the information density. We provide an estimator, TIDE, to
+                    approximate the thresholded information density with a
+                    provable sample complexity. Our framework is then validated
+                    on two real-world datasets providing evidence that the TIDE
+                    can potentially be used as a building block to design privacy
+                    mechanisms targeting only those information-leaking samples and features.
+                    </div>
                 </div>
                 <div class="panel panel-default panel-paper">
                     <div class="panel-body panel-paper-body">
@@ -1316,9 +1469,21 @@
                         </a> &nbsp;&nbsp;
                         <a href="papers/PriML2019_paper_44.pdf" class="link-paper">[pdf]</a>
                     </div>
-                    <!-- <div id="abs37" class="panel-footer panel-paper-footer collapse">
-                    ABSTRACT
-                    </div> -->
+                    <div id="abs37" class="panel-footer panel-paper-footer collapse">
+                    When collaboratively training Machine Learning (ML) models
+                    with Secure Multiparty Computation (SMC), the price paid for
+                    keeping the data of the parties private, is an increase in
+                    computational cost and runtime. A careful choice of ML
+                    techniques, algorithmic and implementation optimizations are
+                    a necessity to enable practical secure ML over distributed
+                    datasets. Such optimizations can be tailored to the kind of
+                    data and ML problem at hand. To the best of our knowledge,
+                    we present the fastest existing SMC implementation for
+                    training logistic regression models on high dimensional data.
+                    For our largest dataset, we train a model that requires over
+                    7 billion secure multiplications; the training completes in
+                    about 2 hours in a local area network.
+                    </div>
                 </div>
                 <div class="panel panel-default panel-paper">
                     <div class="panel-body panel-paper-body">
@@ -1331,9 +1496,22 @@
                         </a> &nbsp;&nbsp;
                         <a href="papers/PriML2019_paper_45.pdf" class="link-paper">[pdf]</a>
                     </div>
-                    <!-- <div id="abs38" class="panel-footer panel-paper-footer collapse">
-                    ABSTRACT
-                    </div> -->
+                    <div id="abs38" class="panel-footer panel-paper-footer collapse">
+                    We present three new algorithms for constructing differentially
+                    private synthetic data—a sanitized version of a sensitive dataset
+                    that approximately preserves the answers to a large collection of
+                    statistical queries. All three algorithms are oracle-efficient in
+                    the sense that they are computationally efficient given access to
+                    an optimization oracle, which can implemented using many existing
+                    (non-private) sophisticated optimization tools such as integer
+                    program solvers. While the accuracy of the synthetic data is
+                    contingent on the oracle’s optimization performance, the algorithms
+                    satisfy differential privacy even in the worst case.
+                    For all three algorithms, we provide theoretical results as well
+                    as preliminary empirical evaluation, which shows that the
+                    algorithms can efficiently and accurately answer a large collection
+                    of queries on the Adult dataset.
+                    </div>
                 </div>
                 <div class="panel panel-default panel-paper">
                     <div class="panel-body panel-paper-body">
@@ -1346,9 +1524,24 @@
                         </a> &nbsp;&nbsp;
                         <a href="papers/PriML2019_paper_46.pdf" class="link-paper">[pdf]</a>
                     </div>
-                    <!-- <div id="abs39" class="panel-footer panel-paper-footer collapse">
-                    ABSTRACT
-                    </div> -->
+                    <div id="abs39" class="panel-footer panel-paper-footer collapse">
+                    The 2020 US Census will use differential privacy for disclosure
+                    avoidance, employing a new algorithm called TopDown to guarantee
+                    privacy loss of at most &varepsilon;. However, it is possible
+                    that there is some slack in the bound
+                    (which is proven using the sequential composition theorem),
+                    and in practice, the privacy loss will be substantially less than &varepsilon;.
+                    In this paper, I develop an empirical measure of privacy loss,
+                    and apply it to three example algorithms, inspired by some aspects of TopDown,
+                    to better understand how the empirical privacy loss might compare
+                    to the theoretical guarantee.
+                    My results suggest that
+                    (1) it is possible to quantify privacy loss empirically in a reasonable amount of time,
+                    at least for counting algorithms like TopDown; and
+                    (2) it is likely that the empirical privacy loss of
+                    hierarchical counting algorithms like TopDown is substantially lower
+                    than the privacy bound derived from the serial composition theorem.
+                    </div>
                 </div>
                 <div class="panel panel-default panel-paper">
                     <div class="panel-body panel-paper-body">
@@ -1361,9 +1554,22 @@
                         </a> &nbsp;&nbsp;
                         <a href="papers/PriML2019_paper_47.pdf" class="link-paper">[pdf]</a>
                     </div>
-                    <!-- <div id="abs40" class="panel-footer panel-paper-footer collapse">
-                    ABSTRACT
-                    </div> -->
+                    <div id="abs40" class="panel-footer panel-paper-footer collapse">
+                    Machine learning models are commonly trained on sensitive
+                    and personal data such as pictures, medical records,
+                    financial records, etc. A serious breach of the privacy of
+                    this training set occurs when an adversary is able to decide
+                    whether or not a specific data point in her possession was
+                    used to train a model. We protect the model by adding noise
+                    to the gradients and as an alternative method, add noise
+                    only to the logits to protect the output of the model and
+                    evaluate the effect of these two differentially-private
+                    techniques against membership inference attacks on 5 diverse
+                    datasets. While all previous membership inference attacks
+                    rely on access to the posterior probabilities, we present
+                    the first attack which only relies on the predicted class
+                    label - yet shows high success rate.
+                    </div>
                 </div>
                 <div class="panel panel-default panel-paper">
                     <div class="panel-body panel-paper-body">
